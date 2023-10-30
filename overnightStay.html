@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sapphire Escape Inn - Home</title>
+    <link href="styles/styles.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" target="_blank">
+                <img src="https://png.pngtree.com/element_our/20190524/ourmid/pngtree-chinese-tourism-day-romantic-maldives-hand-drawn-elements-image_1106432.jpg"
+                    width=25 height=20 alt="Resort Logo">
+
+                  
+
+                <b>Sapphire Escape Inn</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" target="_blank">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="overnightStay.html" target="_blank">Overnight Stay</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <br />
+                    <button class="btn btn-outline-success" type="submit">Search</button> <br /> <br />
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Overnight Stay</h1>
+
+    <form id="roomCostForm">
+
+        <fieldset>
+
+            <br />
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="" required /> <br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="" required /> <br /><br />
+
+            <label for="checkInDate">Check-in:</label>
+            <input type="date" id="checkInDate" name="checkInDate" value="" required /> <br /><br />
+
+            <label for="numberOfNights">Number of Nights:</label>
+            <input type="number" id="numberOfNights" name="numberOfNights" value="" min="1" max="28" required />
+            <br /><br />
+
+            <fieldset>
+                <legend>Room Type:</legend>
+                <input type="radio" name="roomType" id="queenType" value="queen" checked />
+                <label for="queenType">Queen</label>
+
+                <input type="radio" name="roomType" id="kingType" value="king" />
+                <label for="kingType">King</label>
+
+                <input type="radio" name="roomType" id="twoBedroomType" value="suite" />
+                <label for="twoBedroomType">2-Bedroom Suite</label>
+            </fieldset>
+
+            <br />
+            <label for="adults">Adults:</label>
+            <input type="number" id="adults" required min="1" max="4" />
+
+
+            <label for="children"> Children:</label>
+            <input type="number" id="children" required min="0" max="4" />
+            <br /> <br />
+
+            <fieldset>
+
+                <legend>Discount:</legend>
+                <input type="radio" id="none" name="discount" checked />
+                <label for="none">None</label>
+
+
+                <input type="radio" id="AAA/SeniorDiscount" name="discount" />
+                <label for="AAA/SeniorDiscount">AAA/Senior(10%)</label>
+
+
+                <input type="radio" id="militaryDiscount" name="discount" />
+                <label for="militaryDiscount">Military(20%)</label>
+
+            </fieldset>
+
+            <br />
+            <input type="submit" id="roomCost" value="Estimate Stay Cost" /> <br /> <br />
+
+            <div>Original Room Cost: $<span id="originalRoomCost">0</span>/night</div>
+            <div>Discount: $<span id="discount">0</span>/night</div>
+            <div>Discounted Room Cost: $<span id="discountedRoomCost">0</span>/night</div>
+            <div>Tax: $<span id="tax">0</span>/night</div>
+            <div>Total Cost: $<span id="totalCost">0</span>/night</div>
+
+        </fieldset>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
